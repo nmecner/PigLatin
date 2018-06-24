@@ -3,9 +3,11 @@
 <body>
 
 <h1>The pig Latin Translator</h1>
-<form>
-    <input type="text">
-    <input type="submit" value="translate">
+
+<form action="{% url 'translate' %}">
+    <input type="text" name="text"/>
+    <br />
+    <input type="submit" value="translate" />
 </form>
 
 </body>
