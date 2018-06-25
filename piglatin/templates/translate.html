@@ -1,11 +1,16 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <body>
 
 <h1>Pig Latin Translator</h1>
-<p>Original text:<br>
-
+<p><em>Original text:</em><br />
+{{ original }}
 </p>
+<p><em>Translated text:</em> <br />
+{{ translated }}
+</p>
+
+<a href="{% url 'home' %}">Translate again</a>
 
 </body>
 </html>

@@ -8,7 +8,7 @@ def home(request):
 
 
 def translate(request):
-    original_text = request.GET['text']
+    original_text = request.GET['text'].lower()
     translated_text = ''
     vowels = ['a', 'e', 'i', 'o', 'u']
     for word in original_text.split():
@@ -24,8 +24,5 @@ def translate(request):
                     word = word[1:]
             word += leftover_consonant + 'ay '
         translated_text += word
+    return render(request, 'translate.html', {'original': original_text, 'translated': translated_text})
 
-
-
-
-    return HttpResponse("Translated text:" + translated_text)
